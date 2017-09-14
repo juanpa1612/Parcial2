@@ -21,7 +21,6 @@ namespace Parcial2.Game
         private PlayerProfile playerProfile;
 
         private int hp;
-        private int sp;
         private int atk;
 
         public static Player Instance
@@ -58,7 +57,6 @@ namespace Parcial2.Game
         private void Awake()
         {
             hp = 300;
-            sp = 10;
             atk = 5;
 
             playerProfile = new PlayerProfile(5000);
@@ -117,12 +115,8 @@ namespace Parcial2.Game
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Ray castRay = new Ray(transform.position, Vector3.forward * 5F);
-                RaycastHit castInfo;
-
                 Vector3 lookAtLocation = Vector3.zero;
-
-                Debug.DrawRay(transform.position, Vector3.forward * 5F, Color.green, 5F);
+                //Debug.DrawRay(transform.position, Vector3.forward * 5F, Color.green, 5F);
 
                 Collider[] otherColliders = Physics.OverlapSphere(transform.position, 10F);
 
@@ -149,10 +143,9 @@ namespace Parcial2.Game
                     transform.LookAt(lookAtLocation);
                 }
 
-                //BulletPool.GetBullet();
                 Bullet bulletInstance = Instantiate(bulletBase, transform.position + new Vector3(0F, 1F, 0F), transform.rotation);
                 bulletInstance.SetParams(50, 100, this.gameObject);
-                bulletInstance.Toss();                
+                bulletInstance.Toss();
             }
         }
 

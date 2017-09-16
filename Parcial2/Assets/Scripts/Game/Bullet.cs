@@ -12,6 +12,9 @@ namespace Parcial2.Game
 
         private GameObject instigator;
 
+        public delegate void BulletDestroy();
+        public event BulletDestroy OnBulletDestroy;
+
         public void SetParams(float bulletSpeed, int bulletDamage, GameObject instanceInstigator)
         {
             instigator = instanceInstigator;
@@ -42,7 +45,9 @@ namespace Parcial2.Game
 
             if (instigator != other.gameObject)
             {
-                Destroy(gameObject); 
+                Destroy(gameObject);
+                if (OnBulletDestroy != null)
+                    OnBulletDestroy();
             }
         }
 

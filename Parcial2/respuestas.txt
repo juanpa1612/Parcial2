@@ -1,1 +1,16 @@
-[Inserte aquí las respuestas a las preguntas del numeral 1]
+﻿[Inserte aquí las respuestas a las preguntas del numeral 1]
+
+a) Un LookAt que recibe un transform.position como parámetro. Si el enemigo existe, entonces este parámetro será la posición del enemigo.
+
+b) Hay un bool que controla el movimiento del enemigo (canMove), si colisiona con el Player al momento de recibir daño, entonces el enemigo no se puede mover. Además si la velocidad del enemigo es 0, entonces tampoco se podrá mover, tal como lo hace "EnemyD".
+
+c) El métido Instantiate, el cual recibe el prefab de la bala, además de su posición y rotación inicial que parten del transform del Player.
+
+d) Tiene variables publicas como lo son el color y el mesh: Pueden ser accedidas y modificadas.
+Además de estas tiene un Atk y un HP, a los cuales se pueden acceder (Get), sin embargo son protegidas a la hora de definirles un valor (set), esto quiere decir que solo las clases hijas pueden modificar estos valores.
+También posee un booleano privado, lo que quiere decir que no puede ser accedido no modificado por una clase diferente.
+
+e) Es el GameObject del cual parte la bala, si este GameObject es diferente al GameObject con el que colisiona la bala, entonces la bala se destruye.
+
+
+

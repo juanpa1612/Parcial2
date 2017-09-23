@@ -1,0 +1,16 @@
+Feedback:
+
+1. OK (0.3)
+2. OK (0.3)
+3. OK (0.3)
+4. OK (0.3)
+5. OK (0.3)
+
+Código
+1. Las fábricas no cambian los parámetros de los enemigos aleatoriamente. (0.2)
+2. El código provisto suscribe eventos todo el tiempo, pero nunca los desuscribe (-=). Esto puede generar errores (0.3)
+3. El controlador sólo genera una instancia del enemigo provisto por la fábrica seleccionada, pero se necesitaban varios de cualquier tipo (0.2)
+4. El código de la variación de la bala está incompleto; además, no hay botón dedicado para la nueva bala que cumpla con la especificación de activación (0.0)
+5. No encuentro código del pool (0.0)
+
+Total: 2.2
